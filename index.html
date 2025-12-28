@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>30 Days Spoken English - Manjurul Hoque</title>
+    <meta name="description" content="Learn Spoken English in 30 Days. A complete guide for Bengali students.">
+    <meta name="theme-color" content="#0984e3">
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <button id="installBtn" class="install-btn" style="display:none;">📲 অ্যাপটি ইন্সটল করো</button>
+
+    <section id="landing-page">
+        <div class="bubbles">
+            <span style="--i:11;">A</span><span style="--i:12;">B</span><span style="--i:24;">C</span>
+            <span style="--i:10;">D</span><span style="--i:14;">E</span><span style="--i:23;">F</span>
+            <span style="--i:18;">G</span><span style="--i:16;">H</span><span style="--i:19;">I</span>
+        </div>
+        
+        <div class="book-container">
+            <div class="book">
+                <div class="book-cover">
+                    <div class="cover-design">
+                        <i class="fas fa-graduation-cap fa-4x" style="color:#fff; margin-bottom:15px;"></i>
+                        <h1>English<br>Grammar</h1>
+                        <p>For Smart Kids</p>
+                    </div>
+                </div>
+                <div class="book-spine"></div>
+            </div>
+        </div>
+        
+        <h1 class="main-title">ইংলিশ গ্রামার মাস্টারক্লাস</h1>
+        <p class="subtitle">খেলতে খেলতে ইংরেজি শেখার সেরা অ্যাপ</p>
+        
+        <div class="author-badge">
+            <p><strong>শিক্ষক:</strong> মঞ্জুরুল হক</p>
+        </div>
+        
+        <button id="start-reading-btn" class="primary-btn">🚀 চলো শুরু করি</button>
+    </section>
+
+    <section id="reader-page" class="hidden">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>📚 সূচিপত্র</h3>
+                <button id="close-sidebar" class="mobile-only"><i class="fas fa-times"></i></button>
+            </div>
+            <ul id="chapter-list"></ul>
+            <div class="sidebar-footer">
+                <small>Monjurul Haque © 2025</small>
+            </div>
+        </aside>
+
+        <main class="content-area">
+            <div class="top-bar">
+                <button id="toggle-sidebar" class="mobile-only"><i class="fas fa-bars"></i> মেনু</button>
+                <span class="app-name">Easy Grammar</span>
+            </div>
+            
+            <div id="book-content" class="fade-in">
+                </div>
+        </main>
+    </section>
+
+    <script src="content.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
