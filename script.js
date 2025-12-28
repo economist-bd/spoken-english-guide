@@ -123,34 +123,3 @@ window.addEventListener('beforeinstallprompt', (e) => {
         });
     }
 });
-// PWA Installation Logic
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
-            .then(reg => console.log('Service Worker Registered'))
-            .catch(err => console.log('SW Registration Failed', err));
-    });
-}
-
-let deferredPrompt;
-const installBtn = document.createElement('button');
-installBtn.innerText = "📲 Install App";
-installBtn.style.cssText = "position:fixed; bottom:20px; right:20px; background:#e84393; color:white; padding:10px 20px; border:none; border-radius:50px; display:none; z-index:1000; box-shadow:0 4px 10px rgba(0,0,0,0.3); font-weight:bold;";
-document.body.appendChild(installBtn);
-
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = 'block';
-
-    installBtn.addEventListener('click', () => {
-        installBtn.style.display = 'none';
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the install prompt');
-            }
-            deferredPrompt = null;
-        });
-    });
-});
